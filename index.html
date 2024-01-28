@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libralink by Wiwin</title>
+
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="header-container">
+        <a href="#" class="header-logo" alt="Logo Libralink">
+          <i class="ri-book-3-line header-logo-icon"></i>
+          Libralink
+        </a>
+      </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-container">
+        <div class="card card-1">
+          <section class="input-section">
+            <h2>Add New Book</h2>
+            <form action="" id="input-book">
+              <div class="inputs">
+                <input type="text" id="input-book-id" hidden>
+
+                <div class="input">
+                  <input id="input-book-title" class="input-element" type="text" placeholder=" " autocomplete="off" required />
+                  <label for="input-book-title" class="label-element">Title</label>
+                </div>
+                <div class="input">
+                  <input id="input-book-author" class="input-element" type="text" placeholder=" " autocomplete="off" required />
+                  <label for="input-book-author" class="label-element">Author</label>
+                </div>
+                <div class="input">
+                  <input id="input-book-year" class="input-element" type="number" placeholder=" " autocomplete="off" required />
+                  <label for="input-book-year" class="label-element">Year</label>
+                </div>
+                <div class="input-inline">
+                  <input id="input-book-is-complete" type="checkbox" />
+                  <label for="input-book-is-complete">Finished Reading</label>
+                </div>
+              </div>
+              <div class="button-form">
+                <button id="book-add-submit" class="button" type="submit">Add Book</button>
+                <button id="book-update-submit" class="button hidden" type="submit">Update Book</button>
+                <button id="button-cancel" class="button cancel" type="reset" onclick="resetFormInput()">Cancel</button>
+              </div>
+            </form>
+          </section>
+        </div>
+
+        <div class="card card-2">
+          <section class="search-section">
+            <input id="search-book-title" type="text" placeholder="Search Books by Title" autocomplete="off" />
+          </section>
+
+          <section class="bookshelf-section">
+            <div id="incomplete-bookshelf-list" class="book-list">
+              <h2>Unfinished Reads</h2>
+            </div>
+
+            <div id="complete-bookshelf-list" class="book-list">
+              <h2>Finished Reads</h2>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div class="custom-dialog">
+      <div id="overlay" class="overlay"></div>
+    
+      <div id="popup" class="popup">
+        <p></p>
+        <button type="button" onclick="closePopup()">OK</button>
+      </div>
+
+      <div id="confirm-popup" class="confirm-popup">
+        <p></p>
+        <div class="button-confirm">
+          <button type="button" class="button-ok">OK</button>
+          <button type="button" class="button-popup-cancel">CANCEL</button>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer">
+      <div class="footer-container"></div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
